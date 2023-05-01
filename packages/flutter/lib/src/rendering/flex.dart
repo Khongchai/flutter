@@ -1020,11 +1020,6 @@ class RenderFlex extends RenderBox with ContainerRenderObjectMixin<RenderBox, Fl
         case Axis.vertical:
           childParentData.offset = Offset(childCrossPosition, childMainPosition);
       }
-      if (flipMainAxis) {
-        childMainPosition -= betweenSpace;
-      } else {
-        childMainPosition += _getMainSize(child.size) + betweenSpace;
-      }
       child = childParentData.nextSibling;
     }
   }
